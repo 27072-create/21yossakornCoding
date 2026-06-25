@@ -1,19 +1,16 @@
-print("โปรแกรมคำนวณคะแนน")
+print ("โปรแกรมคำนวณค่าไฟ")
+point1=int(input("ค่าไฟ1: "))
+point2=int(input("ค่าไฟ2: "))
+point3=int(input("ค่าไฟ3: "))
 
-score_Math = int(input("คะแนนคณิตคุณได้เท่าไหร่: "))
-score_Thai = int(input("คะแนนภาษาไทยคุณได้เท่าไหร่: "))
-score_Eng = int(input("คะแนนอังกฤษคุณได้เท่าไหร่: "))
+total = point1 + point2 + point3
+average = total / 3
+print("ค่าไฟรวม", total)
+print("ค่าไฟเฉลี่ย ", average )
 
-total_score = (score_Math + score_Thai + score_Eng)
-average = (total_score/3)
-print("คะแนนรวมทั้ง 3 วิชา", total_score, "คะแนน")
-print("คะแนนเฉลี่ยรวมทั้ง 3 วิชา", average, "คะแนน")
-
-if average <60:
-    print("ควรปรับปรุง")
-elif average <80:
-    print("ผ่าน")
-else:
-    print("ดีเยี่ยม")
-
-print("/n นายยศกร ศรีวาจา ม.4/4 เลขที่ 21 ")
+if average <= 9:
+    print("ฟรี")
+elif average <= 50:
+    print("2 บาท/หน่วย")
+elif average <= 100:
+    print ("4 บาท/หน่วย")
